@@ -1,0 +1,33 @@
+{
+  "assessment_id": "demo_assessment_001",
+  "framework": "NIST_CSF_2.0",
+  "summary": {
+    "overall_score": 65,
+    "total_controls": 20,
+    "compliant": 8,
+    "partially_compliant": 7,
+    "non_compliant": 3,
+    "not_enough_evidence": 2
+  },
+  "controls": [
+    {
+      "control_id": "PR.AA-05",
+      "status": "Partially Compliant",
+      "confidence": 0.78,
+      "matched_evidence": [
+        {
+          "file_name": "access_control_policy.pdf",
+          "page_number": 3,
+          "chunk_id": "access_control_policy_p3_c1",
+          "quote": "User access rights shall be reviewed periodically.",
+          "why_relevant": "Supports periodic access review."
+        }
+      ],
+      "missing_evidence": [
+        "No formal access revocation process."
+      ],
+      "reasoning": "Policy discusses access reviews but does not define access revocation.",
+      "recommendation": "Implement and document a formal access revocation procedure."
+    }
+  ]
+}

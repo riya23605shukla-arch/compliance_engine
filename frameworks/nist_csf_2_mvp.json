@@ -1,0 +1,250 @@
+[
+  {
+    "control_id": "GV.RR-01",
+    "function": "Govern",
+    "category": "Roles and Responsibilities",
+    "subcategory": "Cybersecurity roles and responsibilities are established.",
+    "expected_evidence": ["security roles", "responsibility matrix", "governance structure"],
+    "keywords": ["roles", "responsibility", "governance", "security officer"],
+    "assessment_questions": [
+      "Are cybersecurity responsibilities defined?",
+      "Are security roles assigned?"
+    ]
+  },
+
+  {
+    "control_id": "ID.AM-01",
+    "function": "Identify",
+    "category": "Asset Management",
+    "subcategory": "Assets are inventoried and managed.",
+    "expected_evidence": ["asset inventory", "asset register", "asset ownership"],
+    "keywords": ["asset", "inventory", "owner", "tracking"],
+    "assessment_questions": [
+      "Is an asset inventory maintained?",
+      "Are asset owners identified?"
+    ]
+  },
+
+  {
+    "control_id": "ID.AM-02",
+    "function": "Identify",
+    "category": "Asset Management",
+    "subcategory": "Software, hardware and data assets are managed.",
+    "expected_evidence": ["hardware inventory", "software inventory", "asset lifecycle"],
+    "keywords": ["hardware", "software", "asset lifecycle"],
+    "assessment_questions": [
+      "Are hardware assets tracked?",
+      "Are software assets tracked?"
+    ]
+  },
+
+  {
+    "control_id": "ID.RA-01",
+    "function": "Identify",
+    "category": "Risk Assessment",
+    "subcategory": "Cybersecurity risks are identified and documented.",
+    "expected_evidence": ["risk assessment", "risk register", "risk analysis"],
+    "keywords": ["risk", "assessment", "threat", "vulnerability"],
+    "assessment_questions": [
+      "Are cybersecurity risks documented?",
+      "Is a risk assessment process defined?"
+    ]
+  },
+
+  {
+    "control_id": "ID.RA-02",
+    "function": "Identify",
+    "category": "Risk Assessment",
+    "subcategory": "Risk information is analyzed and prioritized.",
+    "expected_evidence": ["risk ranking", "risk scoring", "risk treatment"],
+    "keywords": ["risk score", "risk priority", "risk treatment"],
+    "assessment_questions": [
+      "Are risks prioritized?",
+      "Is risk treatment documented?"
+    ]
+  },
+
+  {
+    "control_id": "PR.AA-01",
+    "function": "Protect",
+    "category": "Access Control",
+    "subcategory": "Identities and credentials are managed.",
+    "expected_evidence": ["user account management", "authentication", "identity management"],
+    "keywords": ["identity", "authentication", "credential"],
+    "assessment_questions": [
+      "Are identities managed?",
+      "Are authentication methods defined?"
+    ]
+  },
+
+  {
+    "control_id": "PR.AA-05",
+    "function": "Protect",
+    "category": "Access Control",
+    "subcategory": "Access permissions are defined and reviewed.",
+    "expected_evidence": ["access control policy", "role based access control", "access review"],
+    "keywords": ["authorization", "least privilege", "access review"],
+    "assessment_questions": [
+      "Are permissions reviewed periodically?",
+      "Is least privilege implemented?"
+    ]
+  },
+
+  {
+    "control_id": "PR.DS-01",
+    "function": "Protect",
+    "category": "Data Security",
+    "subcategory": "Data confidentiality, integrity and availability are protected.",
+    "expected_evidence": ["data protection policy", "encryption", "backup"],
+    "keywords": ["data security", "confidentiality", "integrity"],
+    "assessment_questions": [
+      "Is sensitive data protected?",
+      "Is encryption implemented?"
+    ]
+  },
+
+  {
+    "control_id": "PR.DS-02",
+    "function": "Protect",
+    "category": "Data Security",
+    "subcategory": "Data in transit is protected.",
+    "expected_evidence": ["secure communication", "TLS", "VPN"],
+    "keywords": ["encryption", "transit", "secure channel"],
+    "assessment_questions": [
+      "Is data protected during transmission?"
+    ]
+  },
+
+  {
+    "control_id": "PR.DS-11",
+    "function": "Protect",
+    "category": "Data Security",
+    "subcategory": "Backups are created, protected and tested.",
+    "expected_evidence": ["backup policy", "recovery testing", "backup schedule"],
+    "keywords": ["backup", "recovery", "restore"],
+    "assessment_questions": [
+      "Are backups performed?",
+      "Are backups tested regularly?"
+    ]
+  },
+
+  {
+    "control_id": "PR.PS-01",
+    "function": "Protect",
+    "category": "Platform Security",
+    "subcategory": "Configuration management practices are established.",
+    "expected_evidence": ["configuration management", "baseline configuration"],
+    "keywords": ["configuration", "baseline", "hardening"],
+    "assessment_questions": [
+      "Are configurations documented?"
+    ]
+  },
+
+  {
+    "control_id": "PR.PS-02",
+    "function": "Protect",
+    "category": "Platform Security",
+    "subcategory": "Software is maintained and updated.",
+    "expected_evidence": ["patch management", "software update process"],
+    "keywords": ["patch", "update", "maintenance"],
+    "assessment_questions": [
+      "Is patch management implemented?"
+    ]
+  },
+
+  {
+    "control_id": "DE.CM-01",
+    "function": "Detect",
+    "category": "Continuous Monitoring",
+    "subcategory": "Networks and systems are monitored.",
+    "expected_evidence": ["monitoring policy", "logging", "security monitoring"],
+    "keywords": ["monitoring", "logs", "SIEM"],
+    "assessment_questions": [
+      "Are systems monitored?"
+    ]
+  },
+
+  {
+    "control_id": "DE.CM-03",
+    "function": "Detect",
+    "category": "Continuous Monitoring",
+    "subcategory": "Personnel activity is monitored.",
+    "expected_evidence": ["user activity monitoring", "audit logs"],
+    "keywords": ["audit", "user activity", "monitoring"],
+    "assessment_questions": [
+      "Are user activities monitored?"
+    ]
+  },
+
+  {
+    "control_id": "DE.CM-09",
+    "function": "Detect",
+    "category": "Continuous Monitoring",
+    "subcategory": "Unauthorized activity is detected.",
+    "expected_evidence": ["intrusion detection", "anomaly detection"],
+    "keywords": ["IDS", "threat detection", "alert"],
+    "assessment_questions": [
+      "Are unauthorized activities detected?"
+    ]
+  },
+
+  {
+    "control_id": "RS.MA-01",
+    "function": "Respond",
+    "category": "Incident Management",
+    "subcategory": "Incident response actions are performed.",
+    "expected_evidence": ["incident response plan", "incident handling"],
+    "keywords": ["incident", "response", "containment"],
+    "assessment_questions": [
+      "Is an incident response process documented?"
+    ]
+  },
+
+  {
+    "control_id": "RS.CO-02",
+    "function": "Respond",
+    "category": "Communications",
+    "subcategory": "Incident communications are coordinated.",
+    "expected_evidence": ["communication plan", "stakeholder notification"],
+    "keywords": ["communication", "notification"],
+    "assessment_questions": [
+      "Are incident communication procedures defined?"
+    ]
+  },
+
+  {
+    "control_id": "RS.AN-01",
+    "function": "Respond",
+    "category": "Analysis",
+    "subcategory": "Incidents are investigated and analyzed.",
+    "expected_evidence": ["incident investigation", "root cause analysis"],
+    "keywords": ["analysis", "forensics", "investigation"],
+    "assessment_questions": [
+      "Are incidents analyzed after occurrence?"
+    ]
+  },
+
+  {
+    "control_id": "RC.RP-01",
+    "function": "Recover",
+    "category": "Recovery Planning",
+    "subcategory": "Recovery plans are executed and maintained.",
+    "expected_evidence": ["recovery plan", "business continuity"],
+    "keywords": ["recovery", "BCP", "continuity"],
+    "assessment_questions": [
+      "Is a recovery plan documented?"
+    ]
+  },
+
+  {
+    "control_id": "RC.CO-03",
+    "function": "Recover",
+    "category": "Communications",
+    "subcategory": "Recovery activities are communicated.",
+    "expected_evidence": ["recovery communication", "stakeholder update"],
+    "keywords": ["recovery communication", "stakeholder"],
+    "assessment_questions": [
+      "Are recovery communications defined?"
+    ]
+  }
+]

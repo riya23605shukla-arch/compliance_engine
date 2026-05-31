@@ -1,0 +1,6 @@
+file_name,document_type,expected_relevant_controls,notes
+access_control_policy.pdf,Access Control,"PR.AA-01;PR.AA-05","Access management controls"
+incident_response_policy.pdf,Incident Response,"RS.MA-01;RS.CO-02","Incident handling process"
+risk_management_policy.pdf,Risk Management,"ID.RA-01;ID.RA-02","Risk assessment activities"
+data_security_policy.pdf,Data Security,"PR.DS-01;PR.DS-02","Data protection requirements"
+backup_recovery_policy.pdf,Recovery,"RC.RP-01;RC.CO-03","Backup and recovery procedures"
