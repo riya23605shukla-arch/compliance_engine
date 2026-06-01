@@ -117,6 +117,26 @@ The MVP includes:
 - Generate recommendations
 
 ---
+## Supported Input Formats
+
+For the MVP, the compliance engine accepts the following document formats:
+
+* PDF (.pdf)
+* Microsoft Word Documents (.docx)
+* Text Files (.txt)
+
+The system is designed to process machine-readable documents where text can be directly extracted.
+
+### Out of Scope for MVP
+
+The following formats are not supported in the current version:
+
+* Scanned PDFs containing only images
+* JPEG, PNG, TIFF, or other image files
+* Handwritten documents
+* Screenshots of policies
+
+These document types require Optical Character Recognition (OCR) techniques to extract text before compliance assessment can be performed.
 
 # Out of Scope (Current Version)
 
@@ -287,6 +307,13 @@ Future versions may include:
 - Interactive dashboards
 - Cloud deployment options
 - Continuous compliance monitoring
+-Future versions of the system may incorporate OCR-based processing using tools such as:
+
+* Tesseract OCR
+* EasyOCR
+* PaddleOCR
+
+This will allow the engine to assess scanned documents and image-based policies in addition to text-based documents.
 
 ---
 
