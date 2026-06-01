@@ -1,6 +1,6 @@
 file_name,document_type,expected_relevant_controls,notes
-access_control_policy.pdf,Access Control,"PR.AA-01;PR.AA-05","Access management controls"
-incident_response_policy.pdf,Incident Response,"RS.MA-01;RS.CO-02","Incident handling process"
-risk_management_policy.pdf,Risk Management,"ID.RA-01;ID.RA-02","Risk assessment activities"
-data_security_policy.pdf,Data Security,"PR.DS-01;PR.DS-02","Data protection requirements"
-backup_recovery_policy.pdf,Recovery,"RC.RP-01;RC.CO-03","Backup and recovery procedures"
+Ohio_state_university_asset-management-policy.pdf,Asset Management,"ID.AM-01;ID.AM-02;ID.AM-04;PR.AA-01;PR.PS-01;GV.OV-01","Contains asset inventory, asset ownership, tracking, disposal, stewardship, off-campus asset handling, annual review process"
+ADITYA_BIRLA_GRASIM_information-security-policy.pdf,Information Security,"PR.AA-01;PR.AA-03;PR.AA-05;PR.DS-01;PR.DS-02;PR.PT-01;DE.CM-01;RS.CO-02;GV.RR-01","Contains password controls, access restrictions, data classification, backup requirements, incident reporting, monitoring, remote access security, user responsibilities"
+INDEGENE_information-security-policy.pdf,Information Security Policy,"GV.RR-01;GV.PO-01;ID.RA-01;PR.AA-01;PR.AA-05;PR.DS-01;PR.DS-11;DE.CM-01;RS.MA-01","Defines information security governance, responsibilities, risk management, access control, data protection, monitoring, backups and incident response requirements."
+clark_county_asset_management_policy.pdf,Asset Management Policy,"ID.AM-01;ID.AM-02;ID.AM-03;ID.AM-04;PR.DS-01;PR.DS-02;PR.PS-02;PR.PT-01;RS.MA-01;RC.RP-01","Contains requirements for asset inventory, ownership, classification, encryption, secure disposal, patch management, incident support and recovery planning."
+GPI_InformationSecurityPolicy.pdf,Information Security Policy,"GV.RR-01;ID.RA-01;PR.AA-01;PR.AA-05;PR.DS-01;PR.DS-11;DE.CM-01;RS.MA-01","Defines information security responsibilities, access control, data protection, backup management, monitoring and incident handling."
