@@ -199,6 +199,50 @@ compliance-engine/
 
 ---
 
+## Document Ingestion Pipeline
+
+The ingestion pipeline converts cybersecurity policy documents into structured, machine-readable data for future compliance assessment against NIST CSF 2.0.
+
+### Supported Formats
+
+* PDF (.pdf)
+* DOCX (.docx)
+* TXT (.txt)
+
+### Not Supported
+
+* Images (.png, .jpg, .jpeg)
+* Scanned/Image-based PDFs (OCR support planned in future versions)
+
+### Workflow
+
+Policy Document
+→ Parsing
+→ Text Cleaning
+→ Chunk Generation
+→ JSON Output
+→ Embedding Ready Data
+
+### Implemented Components
+
+* PDF Parser
+* DOCX Parser
+* TXT Parser
+* Text Cleaning Module
+* Chunk Generation Module
+* Processing Summary Report
+
+### Output Locations
+
+* Parsed Documents: `data/parsed_docs/`
+* Generated Chunks: `data/chunks/`
+* Processing Statistics: `data/outputs/processing_summary.json`
+
+### Next Phase
+
+The generated chunks will be used for embedding creation, ChromaDB storage, semantic retrieval, and NIST CSF 2.0 compliance assessment.
+
+
 # Folder Description
 
 | Folder/File | Purpose |
