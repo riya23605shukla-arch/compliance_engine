@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "PR.AA-01",
+    "relevant_documents": [
+      "GPI_InformationSecurityPolicy (1).pdf",
+      "ADITYA_BIRLA_GRASIM_information-security-policy.pdf",
+      "INDEGENE_information-security-policy (1).pdf"
+    ]
+  },
+
+  {
+    "control_id": "PR.DS-01",
+    "relevant_documents": [
+      "GPI_InformationSecurityPolicy (1).pdf",
+      "ADITYA_BIRLA_GRASIM_information-security-policy.pdf"
+    ]
+  },
+
+  {
+    "control_id": "ID.AM-01",
+    "relevant_documents": [
+      "Ohio_state_university_asset-management-policy.pdf",
+      "clark_county_asset_management_policy.pdf"
+    ]
+  },
+
+  {
+    "control_id": "RS.MA-01",
+    "relevant_documents": [
+      "GPI_InformationSecurityPolicy (1).pdf",
+      "INDEGENE_information-security-policy (1).pdf"
+    ]
+  },
+
+  {
+    "control_id": "DE.CM-01",
+    "relevant_documents": [
+      "GPI_InformationSecurityPolicy (1).pdf",
+      "ADITYA_BIRLA_GRASIM_information-security-policy.pdf"
+    ]
+  }
+]

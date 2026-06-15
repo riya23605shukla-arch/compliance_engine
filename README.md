@@ -305,6 +305,43 @@ A final compliance assessment report is generated.
 
 ---
 
+### Retrieval-Augmented Generation (RAG)
+
+This project follows a Retrieval-Augmented Generation (RAG) approach for cybersecurity compliance assessment.
+
+Workflow:
+
+Policy Documents
+        ↓
+Document Parsing
+        ↓
+Text Cleaning
+        ↓
+Chunk Generation
+        ↓
+Embeddings (all-MiniLM-L6-v2)
+        ↓
+ChromaDB Vector Storage
+        ↓
+NIST CSF Control Query Generation
+        ↓
+Top-K Evidence Retrieval
+        ↓
+Compliance Assessment
+
+Instead of sending entire policy documents to an LLM, the system first retrieves the most relevant evidence chunks from organizational policy documents. This improves accuracy, traceability, and explainability of compliance assessments.
+
+Current Scope:
+- PDF, DOCX, and TXT policy documents are supported.
+- Text-based documents only.
+- Scanned PDFs and image-based documents are not supported because OCR is outside the current project scope.
+
+Future Work:
+- OCR support for scanned documents.
+- Hybrid retrieval (keyword + vector search).
+- LLM-based evidence summarization.
+- Automated compliance scoring.
+
 # Assessment Status Categories
 
 The assessment engine classifies controls into four categories:
@@ -360,6 +397,17 @@ Future versions may include:
 This will allow the engine to assess scanned documents and image-based policies in addition to text-based documents.
 
 ---
+
+### Retrieval Evaluation
+
+The retrieval pipeline is evaluated using:
+
+- Hit Rate@5
+- Precision@5
+- Recall@5
+- Mean Reciprocal Rank (MRR)
+
+These metrics help measure how effectively the system retrieves relevant evidence for NIST CSF 2.0 controls from the policy document corpus.
 
 # Conclusion
 

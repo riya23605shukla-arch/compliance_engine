@@ -29,6 +29,9 @@ total_documents = 0
 total_pages = 0
 total_chunks = 0
 
+# total tokens across all chunks
+total_tokens = 0
+
 summary_documents = []
 
 # reads every document
@@ -119,9 +122,19 @@ for filename in os.listdir(RAW_FOLDER):
             indent=4
         )
 
+    # Update statistics for current document
+
     total_documents += 1
     total_pages += len(parsed_doc["pages"])
     total_chunks += len(chunks)
+
+    # Count tokens from every generated chunk
+
+    for chunk in chunks:
+
+        total_tokens += chunk["token_count"]
+
+    # Store summary for this document
 
     summary_documents.append(
         {
@@ -131,7 +144,19 @@ for filename in os.listdir(RAW_FOLDER):
         }
     )
 
- # it helps to store the document summary and then save the summary
+
+# Calculate average chunk size across all documents
+
+if total_chunks > 0:
+
+    average_chunk_size = round(
+        total_tokens / total_chunks,
+        2
+    )
+
+else:
+
+    average_chunk_size = 0
 summary = {
 
     "total_documents":
@@ -144,7 +169,7 @@ summary = {
     total_chunks,
 
     "average_chunk_size":
-    700,
+    average_chunk_size,
 
     "documents":
     summary_documents
