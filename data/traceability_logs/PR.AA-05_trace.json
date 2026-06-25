@@ -1,0 +1,34 @@
+{
+    "control_id": "PR.AA-05",
+    "query": "password policy access control authentication",
+
+    "retrieved_chunks": [
+        {
+            "chunk_id": "ADITYA_chunk_1",
+            "file_name": "ADITYA_BIRLA_GRASIM_information-security-policy.pdf",
+            "page_number": 3,
+            "similarity_score": 0.89
+        },
+        {
+            "chunk_id": "ADITYA_chunk_2",
+            "file_name": "ADITYA_BIRLA_GRASIM_information-security-policy.pdf",
+            "page_number": 5,
+            "similarity_score": 0.84
+        }
+    ],
+
+    "prompt": "Assess whether the retrieved evidence satisfies NIST CSF 2.0 control PR.AA-05. Use only the retrieved evidence. Do not assume information that is not present.",
+
+    "model_output": {
+        "status": "Partially Compliant",
+        "confidence": 0.82,
+        "reasoning": "The policy contains password management and authentication controls but does not provide sufficient evidence for periodic access review procedures.",
+        "missing_evidence": [
+            "Periodic access review process"
+        ],
+        "recommendations": [
+            "Implement and document periodic access review procedures.",
+            "Maintain records of access review activities."
+        ]
+    }
+}

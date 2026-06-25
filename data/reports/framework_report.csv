@@ -1,0 +1,21 @@
+Control ID,Status,Confidence
+GV.RR-01,Non-Compliant,0.0
+ID.AM-01,Partially Compliant,0.33
+ID.AM-02,Non-Compliant,0.0
+ID.RA-01,Non-Compliant,0.0
+ID.RA-02,Non-Compliant,0.0
+PR.AA-01,Non-Compliant,0.0
+PR.AA-05,Compliant,1.0
+PR.DS-01,Partially Compliant,0.33
+PR.DS-02,Non-Compliant,0.0
+PR.DS-11,Partially Compliant,0.33
+PR.PS-01,Non-Compliant,0.0
+PR.PS-02,Non-Compliant,0.0
+DE.CM-01,Non-Compliant,0.0
+DE.CM-03,Non-Compliant,0.0
+DE.CM-09,Non-Compliant,0.0
+RS.MA-01,Partially Compliant,0.5
+RS.CO-02,Non-Compliant,0.0
+RS.AN-01,Non-Compliant,0.0
+RC.RP-01,Non-Compliant,0.0
+RC.CO-03,Non-Compliant,0.0

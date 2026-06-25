@@ -363,6 +363,26 @@ No meaningful evidence exists showing implementation of the control.
 Available documents do not provide enough information to make a determination.
 
 ---
+## Compliance Assessment Flow
+
+1. Load NIST CSF 2.0 controls
+2. Retrieve evidence from policy documents
+3. Assess compliance status
+      Compliant
+      Partially Compliant
+      Non-Compliant
+Not Enough Evidence
+4. Calculate deterministic confidence score
+5. Generate recommendations for missing evidence.
+6. Save assessment results
+7. Generate framework report
+8. Create traceability logs
+
+
+## Output Artifacts
+framework_assessment.json
+framework_report.csv
+traceability_log.json
 
 # Expected Output
 

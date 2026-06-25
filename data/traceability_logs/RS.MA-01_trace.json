@@ -1,0 +1,29 @@
+{
+    "control_id": "RS.MA-01",
+    "query": "incident management response procedures corrective actions recovery process",
+
+    "retrieved_chunks": [
+        {
+            "chunk_id": "CLARK_chunk_11",
+            "file_name": "clark_county_asset_management_policy.pdf",
+            "page_number": 9,
+            "similarity_score": 0.93
+        },
+        {
+            "chunk_id": "ADITYA_chunk_14",
+            "file_name": "ADITYA_BIRLA_GRASIM_information-security-policy.pdf",
+            "page_number": 11,
+            "similarity_score": 0.89
+        }
+    ],
+
+    "prompt": "Assess whether the retrieved evidence satisfies NIST CSF 2.0 control RS.MA-01. Use only the retrieved evidence. Do not assume information that is not present.",
+
+    "model_output": {
+        "status": "Compliant",
+        "confidence": 0.91,
+        "reasoning": "The retrieved evidence contains documented incident handling procedures, corrective actions, escalation requirements and recovery support activities that align with the control requirements.",
+        "missing_evidence": [],
+        "recommendations": []
+    }
+}

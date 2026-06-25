@@ -1,0 +1,35 @@
+{
+    "control_id": "GV.PO-01",
+    "query": "information security governance policy responsibilities management oversight",
+
+    "retrieved_chunks": [
+        {
+            "chunk_id": "INDEGENE_chunk_3",
+            "file_name": "INDEGENE_information-security-policy.pdf",
+            "page_number": 2,
+            "similarity_score": 0.91
+        },
+        {
+            "chunk_id": "GPI_chunk_5",
+            "file_name": "GPI_InformationSecurityPolicy.pdf",
+            "page_number": 4,
+            "similarity_score": 0.86
+        }
+    ],
+
+    "prompt": "Assess whether the retrieved evidence satisfies NIST CSF 2.0 control GV.PO-01. Use only the retrieved evidence. Do not assume information that is not present.",
+
+    "model_output": {
+        "status": "Partially Compliant",
+        "confidence": 0.76,
+        "reasoning": "The policies define information security responsibilities and governance structures, but evidence of formal oversight and periodic governance reviews is limited.",
+        "missing_evidence": [
+            "Formal governance review process",
+            "Periodic oversight documentation"
+        ],
+        "recommendations": [
+            "Document governance review procedures.",
+            "Establish periodic security governance assessments."
+        ]
+    }
+}
