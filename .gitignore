@@ -1,0 +1,47 @@
+# Python
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+
+venv/
+env/
+.venv/
+
+# VS Code
+
+.vscode/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Environment Variables
+
+.env
+
+# OS Files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+
+# ChromaDB (optional)
+
+chroma_db/
+
+# Large Generated Data
+
+data/chunks/
+
+# Python Build Files
+
+build/
+dist/
+*.egg-info/
