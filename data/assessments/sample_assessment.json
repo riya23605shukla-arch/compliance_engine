@@ -1,0 +1,23 @@
+{
+    "control_id": "PR.AA-05",
+    "status": "Partially Compliant",
+    "confidence": 0.82,
+    "reasoning": "Password policy exists but periodic access reviews are not documented.",
+    "found_evidence": [
+        "Password Policy",
+        "Authentication Controls"
+    ],
+    "missing_evidence": [
+        "Periodic Access Reviews"
+    ],
+    "recommendations": [
+        "Implement periodic access review procedures."
+    ],
+    "evidence": [
+        {
+            "file_name": "ADITYA_BIRLA_GRASIM_information-security-policy.pdf",
+            "page_number": 3,
+            "chunk_id": "ADITYA_chunk_1"
+        }
+    ]
+}

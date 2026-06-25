@@ -1,0 +1,320 @@
+[
+    {
+        "control_id": "GV.RR-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "security roles",
+            "responsibility matrix",
+            "governance structure"
+        ],
+        "recommendations": [
+            "Provide evidence for: security roles",
+            "Provide evidence for: responsibility matrix",
+            "Provide evidence for: governance structure"
+        ]
+    },
+    {
+        "control_id": "ID.AM-01",
+        "status": "Partially Compliant",
+        "confidence": 0.33,
+        "reasoning": "1 of 3 expected evidence items were found.",
+        "found_evidence": [
+            "asset inventory"
+        ],
+        "missing_evidence": [
+            "asset register",
+            "asset ownership"
+        ],
+        "recommendations": [
+            "Provide evidence for: asset register",
+            "Provide evidence for: asset ownership"
+        ]
+    },
+    {
+        "control_id": "ID.AM-02",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "hardware inventory",
+            "software inventory",
+            "asset lifecycle"
+        ],
+        "recommendations": [
+            "Provide evidence for: hardware inventory",
+            "Provide evidence for: software inventory",
+            "Provide evidence for: asset lifecycle"
+        ]
+    },
+    {
+        "control_id": "ID.RA-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "risk assessment",
+            "risk register",
+            "risk analysis"
+        ],
+        "recommendations": [
+            "Provide evidence for: risk assessment",
+            "Provide evidence for: risk register",
+            "Provide evidence for: risk analysis"
+        ]
+    },
+    {
+        "control_id": "ID.RA-02",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "risk ranking",
+            "risk scoring",
+            "risk treatment"
+        ],
+        "recommendations": [
+            "Provide evidence for: risk ranking",
+            "Provide evidence for: risk scoring",
+            "Provide evidence for: risk treatment"
+        ]
+    },
+    {
+        "control_id": "PR.AA-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "user account management",
+            "authentication",
+            "identity management"
+        ],
+        "recommendations": [
+            "Provide evidence for: user account management",
+            "Provide evidence for: authentication",
+            "Provide evidence for: identity management"
+        ]
+    },
+    {
+        "control_id": "PR.AA-05",
+        "status": "Compliant",
+        "confidence": 1.0,
+        "reasoning": "3 of 3 expected evidence items were found.",
+        "found_evidence": [
+            "access control policy",
+            "role based access control",
+            "access review"
+        ],
+        "missing_evidence": [],
+        "recommendations": []
+    },
+    {
+        "control_id": "PR.DS-01",
+        "status": "Partially Compliant",
+        "confidence": 0.33,
+        "reasoning": "1 of 3 expected evidence items were found.",
+        "found_evidence": [
+            "backup"
+        ],
+        "missing_evidence": [
+            "data protection policy",
+            "encryption"
+        ],
+        "recommendations": [
+            "Provide evidence for: data protection policy",
+            "Provide evidence for: encryption"
+        ]
+    },
+    {
+        "control_id": "PR.DS-02",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "secure communication",
+            "TLS",
+            "VPN"
+        ],
+        "recommendations": [
+            "Provide evidence for: secure communication",
+            "Provide evidence for: TLS",
+            "Provide evidence for: VPN"
+        ]
+    },
+    {
+        "control_id": "PR.DS-11",
+        "status": "Partially Compliant",
+        "confidence": 0.33,
+        "reasoning": "1 of 3 expected evidence items were found.",
+        "found_evidence": [
+            "backup policy"
+        ],
+        "missing_evidence": [
+            "recovery testing",
+            "backup schedule"
+        ],
+        "recommendations": [
+            "Provide evidence for: recovery testing",
+            "Provide evidence for: backup schedule"
+        ]
+    },
+    {
+        "control_id": "PR.PS-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "configuration management",
+            "baseline configuration"
+        ],
+        "recommendations": [
+            "Provide evidence for: configuration management",
+            "Provide evidence for: baseline configuration"
+        ]
+    },
+    {
+        "control_id": "PR.PS-02",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "patch management",
+            "software update process"
+        ],
+        "recommendations": [
+            "Provide evidence for: patch management",
+            "Provide evidence for: software update process"
+        ]
+    },
+    {
+        "control_id": "DE.CM-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 3 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "monitoring policy",
+            "logging",
+            "security monitoring"
+        ],
+        "recommendations": [
+            "Provide evidence for: monitoring policy",
+            "Provide evidence for: logging",
+            "Provide evidence for: security monitoring"
+        ]
+    },
+    {
+        "control_id": "DE.CM-03",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "user activity monitoring",
+            "audit logs"
+        ],
+        "recommendations": [
+            "Provide evidence for: user activity monitoring",
+            "Provide evidence for: audit logs"
+        ]
+    },
+    {
+        "control_id": "DE.CM-09",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "intrusion detection",
+            "anomaly detection"
+        ],
+        "recommendations": [
+            "Provide evidence for: intrusion detection",
+            "Provide evidence for: anomaly detection"
+        ]
+    },
+    {
+        "control_id": "RS.MA-01",
+        "status": "Partially Compliant",
+        "confidence": 0.5,
+        "reasoning": "1 of 2 expected evidence items were found.",
+        "found_evidence": [
+            "incident response plan"
+        ],
+        "missing_evidence": [
+            "incident handling"
+        ],
+        "recommendations": [
+            "Provide evidence for: incident handling"
+        ]
+    },
+    {
+        "control_id": "RS.CO-02",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "communication plan",
+            "stakeholder notification"
+        ],
+        "recommendations": [
+            "Provide evidence for: communication plan",
+            "Provide evidence for: stakeholder notification"
+        ]
+    },
+    {
+        "control_id": "RS.AN-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "incident investigation",
+            "root cause analysis"
+        ],
+        "recommendations": [
+            "Provide evidence for: incident investigation",
+            "Provide evidence for: root cause analysis"
+        ]
+    },
+    {
+        "control_id": "RC.RP-01",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "recovery plan",
+            "business continuity"
+        ],
+        "recommendations": [
+            "Provide evidence for: recovery plan",
+            "Provide evidence for: business continuity"
+        ]
+    },
+    {
+        "control_id": "RC.CO-03",
+        "status": "Non-Compliant",
+        "confidence": 0.0,
+        "reasoning": "0 of 2 expected evidence items were found.",
+        "found_evidence": [],
+        "missing_evidence": [
+            "recovery communication",
+            "stakeholder update"
+        ],
+        "recommendations": [
+            "Provide evidence for: recovery communication",
+            "Provide evidence for: stakeholder update"
+        ]
+    }
+]
