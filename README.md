@@ -197,19 +197,16 @@ compliance-engine/
 └── run_assessment.py
 <<<<<<< HEAD
 ```
-## Architecture Diagram
-![Uploading diagram-export-02-07-2026-13_14_59.png…]()
-=======
->>>>>>> 32da016 (Added architecture images)
 
 
-## 🏗️ System Architecture
+
+##  System Architecture
 
 <img src="./assets/architecture.png" width="900">
 
 ---
 
-## 🔄 Workflow
+##  Workflow
 
 <img src="./assets/workflow.png" width="900">
 
