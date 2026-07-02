@@ -199,6 +199,12 @@ compliance-engine/
 ## Architecture Diagram
 ![Uploading diagram-export-02-07-2026-13_14_59.png…]()
 
+##  System Architecture
+
+<p align="center">
+  <img src="assets/architecture.png" alt="System Architecture" width="1000"/>
+</p>
+
 ---
 
 ## Document Ingestion Pipeline
