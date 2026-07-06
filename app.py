@@ -7,6 +7,15 @@ import json
 from utils import save_uploaded_files
 from pipeline import run_pipeline
 
+# ======================================================
+# CYBERSECURITY BANNER
+# ======================================================
+
+st.image(
+    "assets/banner.png",
+    width="stretch"
+)
+
 # -------------------------------------------------------
 # PAGE CONFIG
 # -------------------------------------------------------
@@ -428,15 +437,17 @@ if run:
                 else:
 
                     for index, evidence in enumerate(found):
+                        with st.expander(f"Retrieved Evidence {index+1}"):
 
-                        st.success(
-                            f"Evidence {index+1}"
-                        )
+                               st.write(evidence)
+                        
+                            
+                        
 
-                        st.write(evidence)
+                        
 
-                        st.markdown("---")
-
+                        
+            
             # ===========================================
             # Missing Evidence
             # ===========================================

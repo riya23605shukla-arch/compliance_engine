@@ -1,24 +1,43 @@
-# Handles all ChromaDB operations
-
+import os
 import chromadb
 
-# location of persistent vector database
-DB_PATH = "data/chroma_db"
+# ==========================================
+# Project Root
+# ==========================================
 
-#collection containing policy document chunks
+BASE_DIR = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        ".."
+    )
+)
+
+# ==========================================
+# Absolute ChromaDB Path
+# ==========================================
+
+DB_PATH = os.path.join(
+    BASE_DIR,
+    "data",
+    "chroma_db"
+)
+
 COLLECTION_NAME = "policy_chunks"
 
+# ==========================================
+# Connect to ChromaDB
+# ==========================================
 
 def get_collection():
-   
-   # cretae or connect to chromaDB
+
     client = chromadb.PersistentClient(
         path=DB_PATH
     )
-    # load collection if it exists
-    # otherwise create a new one
+
     collection = client.get_or_create_collection(
-        name=COLLECTION_NAME
-    )
+    name=COLLECTION_NAME,
+    metadata={"hnsw:space": "cosine"}
+)
 
     return collection

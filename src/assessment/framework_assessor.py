@@ -53,12 +53,9 @@ def assess_framework(
             )
         )
 
-        confidence = calculate_confidence(
+        confidence = assessment["confidence"]
 
-            found_count,
-
-            expected_count
-        )
+           
 
         results.append({
 
@@ -90,7 +87,12 @@ def assess_framework(
                 assessment.get(
                     "recommendations",
                     []
-                )
+                ),
+            "matched_chunks":
+                 assessment.get(
+                    "matched_chunks",
+                     []
+        )
         })
 
     return results

@@ -1,17 +1,23 @@
-# src/assessment/control_assessor.py
+from sentence_transformers import SentenceTransformer, util
+from src.assessment.scoring import calculate_confidence
 
-from src.assessment.scoring import (
-    calculate_confidence
-)
+# ============================================================
+# Load Embedding Model
+# ============================================================
 
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+# ============================================================
+# Constants
+# ============================================================
 
 COMPLIANT = "Compliant"
-
 PARTIALLY_COMPLIANT = "Partially Compliant"
-
 NON_COMPLIANT = "Non-Compliant"
-
 NOT_ENOUGH_EVIDENCE = "Not Enough Evidence"
+
+FULL_MATCH_THRESHOLD = 0.75
+PARTIAL_MATCH_THRESHOLD = 0.55
 
 
 def assess_control(
@@ -21,48 +27,168 @@ def assess_control(
     retrieved_chunks
 ):
 
-    print("\n-----------------------------------")
-    print("Assessing Control:", control_id)
-    print("-----------------------------------")
+    print("\n" + "=" * 80)
+    print("Assessing Control :", control_id)
+    print("=" * 80)
 
-    combined_text = " ".join(
+    if len(retrieved_chunks) == 0:
+
+        return {
+
+            "status": NOT_ENOUGH_EVIDENCE,
+
+            "confidence": 0,
+
+            "reasoning": "No retrieved chunks available.",
+
+            "found_evidence": [],
+
+            "missing_evidence": expected_evidence,
+
+            "matched_chunks": [],
+
+            "recommendations": [
+                f"Provide evidence for: {e}"
+                for e in expected_evidence
+            ]
+
+        }
+
+    # ======================================================
+    # Prepare Chunks
+    # ======================================================
+
+    chunk_texts = [
 
         chunk["text"]
 
         for chunk in retrieved_chunks
 
-    ).lower()
+    ]
+
+    chunk_embeddings = model.encode(
+
+        chunk_texts,
+
+        convert_to_tensor=True
+
+    )
 
     found_evidence = []
 
     missing_evidence = []
 
+    matched_chunks = []
+
+    similarity_scores = []
+    # ======================================================
+    # Semantic Matching
+    # ======================================================
+
     for evidence in expected_evidence:
 
-        if evidence.lower() in combined_text:
+        evidence_embedding = model.encode(
+            evidence,
+            convert_to_tensor=True
+        )
+
+        scores = util.cos_sim(
+            evidence_embedding,
+            chunk_embeddings
+        )[0]
+
+        best_index = scores.argmax().item()
+
+        best_score = float(
+            scores[best_index]
+        )
+
+        best_chunk = chunk_texts[
+            best_index
+        ]
+
+        similarity_scores.append(
+            best_score
+        )
+
+        print("\n" + "-" * 60)
+        print("Expected Evidence :")
+        print(evidence)
+
+        print("\nBest Similarity :")
+        print(round(best_score, 3))
+
+        print("\nMatched Chunk :")
+        print(best_chunk[:300])
+
+        print("-" * 60)
+
+        if best_score >= FULL_MATCH_THRESHOLD:
 
             found_evidence.append(
                 evidence
             )
+
+            matched_chunks.append({
+
+                "expected_evidence": evidence,
+
+                "similarity": round(
+                    best_score,
+                    3
+                ),
+
+                "matched_text": best_chunk
+
+            })
+
+        elif best_score >= PARTIAL_MATCH_THRESHOLD:
+
+            found_evidence.append(
+                evidence + " (Semantic Match)"
+            )
+
+            matched_chunks.append({
+
+                "expected_evidence": evidence,
+
+                "similarity": round(
+                    best_score,
+                    3
+                ),
+
+                "matched_text": best_chunk
+
+            })
 
         else:
 
             missing_evidence.append(
                 evidence
             )
+     # ======================================================
+    # Confidence Calculation (Semantic Based)
+    # ======================================================
 
-    confidence = calculate_confidence(
+    total = len(expected_evidence)
 
-        len(found_evidence),
+    found = len(found_evidence)
 
-        len(expected_evidence)
-    )
+    if similarity_scores:
 
-    if len(found_evidence) == len(expected_evidence):
+        average_similarity = sum(similarity_scores) / len(similarity_scores)
+
+        confidence = round(average_similarity, 2)
+
+    else:
+
+        confidence = 0
+
+    if confidence >= 0.80:
 
         status = COMPLIANT
 
-    elif len(found_evidence) > 0:
+    elif confidence >= 0.60:
 
         status = PARTIALLY_COMPLIANT
 
@@ -74,41 +200,55 @@ def assess_control(
 
         status = NON_COMPLIANT
 
+    # ======================================================
+    # Recommendations
+    # ======================================================
+
     recommendations = []
 
     for item in missing_evidence:
 
         recommendations.append(
-
             f"Provide evidence for: {item}"
-
         )
 
+    # ======================================================
+    # Reasoning
+    # ======================================================
+
     reasoning = (
-
-        f"{len(found_evidence)} of "
-
-        f"{len(expected_evidence)} "
-
-        f"expected evidence items "
-
-        f"were found."
+        f"{found} of {total} expected evidence items matched. "
+        f"Average semantic similarity = {confidence}."
     )
+
+    print("\nSummary")
+
+    print("Found Evidence :", found)
+
+    print("Missing Evidence :", len(missing_evidence))
+
+    print("Confidence :", confidence)
+
+    print("Status :", status)
+
+    # ======================================================
+    # Return
+    # ======================================================
 
     return {
 
-        "status":
-            status,
+        "status": status,
 
-        "reasoning":
-            reasoning,
+        "confidence": confidence,
 
-        "found_evidence":
-            found_evidence,
+        "reasoning": reasoning,
 
-        "missing_evidence":
-            missing_evidence,
+        "found_evidence": found_evidence,
 
-        "recommendations":
-            recommendations
+        "missing_evidence": missing_evidence,
+
+        "matched_chunks": matched_chunks,
+
+        "recommendations": recommendations
+
     }

@@ -24,6 +24,22 @@ CHUNKS_FOLDER = "data/chunks"
 os.makedirs(PARSED_FOLDER, exist_ok=True)
 os.makedirs(CHUNKS_FOLDER, exist_ok=True)
 
+# ==========================================
+# CLEAN PREVIOUS RUN FILES
+# ==========================================
+
+for folder in [PARSED_FOLDER, CHUNKS_FOLDER]:
+
+    for file in os.listdir(folder):
+
+        file_path = os.path.join(folder, file)
+
+        if os.path.isfile(file_path):
+
+            os.remove(file_path)
+
+print("Previous Parsed Files Deleted")
+print("Previous Chunk Files Deleted")
  # these are the statistics folder
 total_documents = 0
 total_pages = 0

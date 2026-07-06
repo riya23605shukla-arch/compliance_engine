@@ -1,18 +1,18 @@
 {
     "total_documents": 2,
-    "total_pages": 56,
-    "total_chunks": 58,
-    "average_chunk_size": 363.12,
+    "total_pages": 20,
+    "total_chunks": 23,
+    "average_chunk_size": 305.52,
     "documents": [
         {
-            "file": "Bank-Policy-Development-pol-fin (1).pdf",
-            "pages": 14,
-            "chunks": 13
+            "file": "INDEGENE_information-security-policy (1).pdf",
+            "pages": 11,
+            "chunks": 11
         },
         {
-            "file": "rbinew.pdf",
-            "pages": 42,
-            "chunks": 45
+            "file": "Ohio_state_university_asset-management-policy.pdf",
+            "pages": 9,
+            "chunks": 12
         }
     ]
 }

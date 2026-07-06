@@ -1,62 +1,61 @@
-from src.assessment.framework_assessor import (
-    assess_framework
-)
+from src.assessment.framework_assessor import assess_framework
+from src.assessment.save_assessment import save_assessments
+from src.assessment.report_generator import generate_report
+from src.assessment.traceability_logger import save_traceability_log
 
-from src.assessment.save_assessment import (
-    save_assessments
-)
-from src.assessment.report_generator import (
-    generate_report
-)
-from src.assessment.traceability_logger import (
-    save_traceability_log
-)
-retrieved_chunks = [
+from src.retrieval.chroma_manager import get_collection
 
-    {
+# ==========================================
+# LOAD CHUNKS FROM CHROMADB
+# ==========================================
 
-        "text":
+collection = get_collection()
 
-        """
-        Access control policy exists.
+data = collection.get()
 
-        Role based access control
-        is implemented.
+retrieved_chunks = []
 
-        Access review is conducted.
+documents = data.get("documents", [])
+metadatas = data.get("metadatas", [])
 
-        Password requirements
-        are enforced.
+for i, doc in enumerate(documents):
 
-        Incident response plan
-        exists.
+    metadata = {}
 
-        Asset inventory is maintained.
+    if i < len(metadatas):
+        metadata = metadatas[i]
 
-        Backup policy is documented.
-        """
-    }
-]
+    retrieved_chunks.append(
+        {
+            "text": doc,
+            "metadata": metadata
+        }
+    )
+
+print(f"\nRetrieved {len(retrieved_chunks)} chunks from ChromaDB\n")
+
+# ==========================================
+# RUN ASSESSMENT
+# ==========================================
 
 results = assess_framework(
     retrieved_chunks
 )
 
-save_assessments(
-    results
-)
+save_assessments(results)
 
 generate_report(results)
+
 save_traceability_log(results)
 
+# ==========================================
+# PRINT RESULTS
+# ==========================================
 
 for item in results:
 
     print(
-
         item["control_id"],
-
         item["status"],
-
         item["confidence"]
     )

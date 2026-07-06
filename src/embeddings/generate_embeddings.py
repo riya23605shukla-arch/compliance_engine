@@ -14,12 +14,41 @@ from src.retrieval.chroma_manager import get_collection
 
 # connect to existing chromadb connection
 collection = get_collection()
+# ==========================================
+# CLEAR OLD EMBEDDINGS
+# ==========================================
+
+try:
+
+    existing = collection.get()
+
+    if existing["ids"]:
+
+        collection.delete(
+            ids=existing["ids"]
+        )
+
+        print("Previous Embeddings Deleted")
+
+except:
+
+    pass
 
 # Folder containing chunk files
 CHUNKS_FOLDER = "data/chunks"
 
 # iterate through every chunk file
-for file_name in os.listdir(CHUNKS_FOLDER):
+chunk_files = [
+
+    file
+
+    for file in os.listdir(CHUNKS_FOLDER)
+
+    if file.endswith(".json")
+
+]
+
+for file_name in chunk_files:
 
     # skip non json files
     if not file_name.endswith(".json"):
