@@ -198,13 +198,16 @@ compliance-engine/
 
 
 
-## 🏗️ System Architecture
+
+
+
+##  System Architecture
 
 <img src="./assets/architecture.png" width="900">
 
 ---
 
-## 🔄 Workflow
+##  Workflow
 
 <img src="./assets/workflow.png" width="900">
 
