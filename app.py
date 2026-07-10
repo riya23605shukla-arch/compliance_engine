@@ -175,22 +175,48 @@ if run:
             if r["status"] == "Not Enough Evidence"
         ]
     )
+    # -------------------------------------------------------
+    # Overall Compliance Score
+    # -------------------------------------------------------
+
+    status_score = {
+        "Compliant": 100,
+        "Partially Compliant": 50,
+        "Non-Compliant": 0,
+        "Not Enough Evidence": 0
+    }
 
     overall_score = round(
-        (
-            sum(
-                r["confidence"]
-                for r in results
-            )
-            /
-            total_controls
+       sum(status_score[r["status"]] for r in results)
+       / total_controls,
+       2
+    )
+
+    # -------------------------------------------------------
+    # Average Confidence Score
+    # -------------------------------------------------------
+
+    average_confidence = round(
+       (
+            sum(r["confidence"] for r in results)
+            / total_controls
         ) * 100,
         2
     )
+    #overall_score = round(
+     #   (
+      #       compliant + (0.5 * partial)
+       # )
+       # /
+       # total_controls
+       # * 100,
+       # 2
+      #)   
+     
 
     st.header("📊 Compliance Summary Dashboard")
 
-    c1, c2, c3, c4, c5 = st.columns(5)
+    c1, c2, c3, c4, c5,c6 = st.columns(6)
 
     c1.metric(
         "Overall Score",
@@ -216,9 +242,12 @@ if run:
         "Total Controls",
         total_controls
     )
-
+    c6.metric(
+        "Average Confidence",
+        f"{average_confidence}%"
+    )
     st.markdown("---")
-        # =====================================================
+    # =====================================================
     # PIE CHART
     # =====================================================
 
